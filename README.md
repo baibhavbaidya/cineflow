@@ -2,7 +2,7 @@
 
 A production-grade **end-to-end ELT data pipeline** that ingests real-time movie & TV show data from TMDB, transforms it using dbt, and serves insights through a cinematic analytics dashboard.
 
-**Live Demo →** [https://your-live-link-here.vercel.app](https://your-live-link-here.vercel.app)
+**Live Demo →** [https://cineflow-bb.vercel.app](https://cineflow-bb.vercel.app)
 
 ---
 
