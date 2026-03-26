@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: dim_genres
+    description: "Dimension table combining movie and TV genres"
+    columns:
+      - name: genre_id
+        tests:
+          - not_null
+      - name: genre_name
+        tests:
+          - not_null
+
+  - name: fct_trending_movies
+    description: "Fact table of trending movies joined with genre names"
+    columns:
+      - name: movie_id
+        tests:
+          - not_null
+      - name: title
+        tests:
+          - not_null
+
+  - name: fct_genre_performance
+    description: "Aggregated genre performance metrics for movies and TV"
+    columns:
+      - name: genre_name
+        tests:
+          - not_null
+      - name: content_type
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['movie', 'tv']

@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_movies
+    description: "Cleaned and typed staging layer for raw movies"
+    columns:
+      - name: movie_id
+        description: "Primary key from TMDB"
+        tests:
+          - unique
+          - not_null
+      - name: title
+        tests:
+          - not_null
+      - name: vote_average
+        description: "Rating between 0 and 10"
+      - name: release_date
+        tests:
+          - not_null
+
+  - name: stg_tv_shows
+    description: "Cleaned and typed staging layer for raw TV shows"
+    columns:
+      - name: show_id
+        description: "Primary key from TMDB"
+        tests:
+          - unique
+          - not_null
+      - name: title
+        tests:
+          - not_null
